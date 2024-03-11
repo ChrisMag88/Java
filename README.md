@@ -1,3 +1,9 @@
+## Ejemplo URL para la consulta a SerpApi con motor de búsqueda Google Scholar
+
+```bash
+http://localhost:8080/serpapi/v1/get?q=top+investigadores&api_key=50dff7bb515b7cf989162ec5a805977e750882b0a3e92bc00af6e0f0254ec703
+```
+
 ## Parámetros de la API de Google Scholar
 
 ### Parámetro: q
