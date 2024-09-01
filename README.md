@@ -1,56 +1,86 @@
-## Ejemplo URL para la consulta a SerpApi con motor de búsqueda Google Scholar
+# Introducción a la Metodología SCRUM y Formatos de Archivos JSON y CSV
 
-```bash
-http://localhost:8080/serpapi/v1/get?q=top+investigadores&api_key=50dff7bb515b7cf989162ec5a805977e750882b0a3e92bc00af6e0f0254ec703
-```
+## 1. Metodología SCRUM
 
-## Parámetros de la API de Google Scholar
+### 1.1 ¿Qué es SCRUM?
 
-### Parámetro: q
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Especifica el término de búsqueda o la consulta a enviar a Google Scholar. Puede contener palabras clave, frases o consultas avanzadas.
-- **Requerido:** True
+Scrum es un marco de trabajo ágil para el desarrollo y mantenimiento de productos complejos. Su objetivo principal es entregar valor de manera incremental a través de ciclos de trabajo iterativos llamados sprints. En Scrum, se promueve la colaboración entre los equipos, la adaptabilidad al cambio, y la entrega constante de valor.
 
-### Parámetro: engine
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Parámetro para determinare el motor de búsqueda utilizado (En este caso se ocupara **google_scholar**)
-- **Requerido:** True
+### 1.2 Fases de SCRUM
 
-### Parámetro: api_key
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Llave privada asignada por SerpApi para generar las consultas
-- **Requerido:** True
+Scrum no sigue fases tradicionales, pero se puede describir su proceso en las siguientes actividades clave:
 
-### Parámetro: num
-- **Tipo de dato:** Entero (Integer)
-- **Descripción:** Especifica el número máximo de resultados que se devolverán. El valor predeterminado es 10 y el máximo es 100.
-- **Requerido:** False
+- **Inicio del Proyecto:**
+  - Definición de la Visión del Producto
+  - Creación del Product Backlog
+  - Formación del Equipo Scrum
+  - Establecimiento de la Definición de Terminado (DoD)
 
-### Parámetro: start
-- **Tipo de dato:** Entero (Integer)
-- **Descripción:** Especifica el índice del primer resultado a devolver. Se utiliza para paginar los resultados. El valor predeterminado es 0.
-- **Requerido:** False
+- **Ejecución de Sprints:**
+  - Planificación del Sprint (Sprint Planning)
+  - Ejecución del Sprint
+  - Revisión del Sprint (Sprint Review)
+  - Retrospectiva del Sprint (Sprint Retrospective)
 
-### Parámetro: hl
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Establece el idioma de los resultados devueltos. Se utiliza para localizar los resultados en el idioma especificado.
-- **Requerido:** False
+- **Entrega y Cierre:**
+  - Entrega del Producto
+  - Cierre del Proyecto (opcional)
 
-### Parámetro: as_ylo
-- **Tipo de dato:** Entero (Integer)
-- **Descripción:** Limita los resultados a aquellos publicados en o después del año especificado.
-- **Requerido:** False
+### 1.3 ¿Cómo Implementar SCRUM?
 
-### Parámetro: as_yhi
-- **Tipo de dato:** Entero (Integer)
-- **Descripción:** Limita los resultados a aquellos publicados en o antes del año especificado.
-- **Requerido:** False
+La implementación de Scrum implica los siguientes pasos:
 
-### Parámetro: as_vis
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Filtra los resultados por visibilidad. Puede tener valores como "0" para todos los resultados, "1" para incluir solo los resultados visibles públicamente, etc.
-- **Requerido:** False
+1. **Formar el Equipo:**
+   - Designar los roles de Product Owner, Scrum Master y Equipo de Desarrollo.
 
-### Parámetro: as_sdt
-- **Tipo de dato:** Cadena de caracteres (String)
-- **Descripción:** Filtra los resultados por tipo de documento. Puede tener valores como "0" para todos los documentos, "0,1" para incluir artículos y patentes, etc.
+2. **Capacitación en Scrum:**
+   - Asegurar que el equipo entienda los principios y prácticas de Scrum.
+
+3. **Crear y Priorizar el Product Backlog:**
+   - Trabajar con el Product Owner para desarrollar un backlog inicial.
+
+4. **Iniciar el Primer Sprint:**
+   - Planificar el trabajo del primer sprint en la reunión de Sprint Planning.
+
+5. **Reuniones diarias (Daily Scrum):**
+   - Mantener reuniones diarias para sincronizar el trabajo y resolver impedimentos.
+
+6. **Revisión y Retrospectiva:**
+   - Realizar revisiones y retrospectivas al final de cada sprint para mejorar continuamente.
+
+7. **Iterar:**
+   - Repetir los sprints hasta que el producto esté completo o el proyecto finalice.
+
+## 2. Características de Archivos JSON y CSV
+
+### 2.1 JSON (JavaScript Object Notation)
+
+JSON es un formato ligero de intercambio de datos, fácil de leer y escribir tanto para humanos como para máquinas. Se utiliza ampliamente en aplicaciones web para la transmisión de datos.
+
+- **Sintaxis:**
+  - Basado en la sintaxis de objetos de JavaScript.
+  - Utiliza pares clave-valor para representar datos.
+  - Soporta estructuras como objetos y arrays.
+  
+- **Ejemplo de JSON:**
+  ```json
+  {
+    "nombre": "Juan",
+    "edad": 30,
+    "esEstudiante": false,
+    "cursos": ["Matemáticas", "Ciencias", "Historia"]
+  }
+
+### 2.2 CSV (Comma-Separated Values)
+
+CSV en un formato simple de texto para almacenar datos tabulares, donde cada línea corresponde a un registro y los valores de cada campo se separan por comas.
+
+- **Sintaxis:**
+  - Los campos se separan por comas (´,´).
+  - La primera línea suele contener los nombres de las columnas.
+  - No es adecuado para datos jerárquicos o estructuras complejas.
+ 
+- **Ejemplo de CSV:**
+  ```csv
+  nombre,edad,esEstudiante,cursos
+  Juan,30,false,"Matemáticas, Ciencias, Historia"

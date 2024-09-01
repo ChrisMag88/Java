@@ -65,7 +65,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>ReaderProject</groupId>
+			<artifactId>ReaderProject</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
